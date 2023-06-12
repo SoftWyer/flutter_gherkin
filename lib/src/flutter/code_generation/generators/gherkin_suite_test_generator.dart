@@ -65,7 +65,6 @@ Future<void> executeTestSuite({
     scenarioExecutionTimeout: scenarioExecutionTimeout,
     framePolicy: framePolicy,
   ).run();
-}
 ''';
   final _reporter = NoOpReporter();
   final _languageService = LanguageService();
@@ -184,16 +183,16 @@ class FeatureFileTestGeneratorVisitor extends FeatureFileVisitor {
   ''';
   static const String onBeforeScenarioRun = '''
   onBefore: () async => onBeforeRunFeature(
-    name:'{{feature_name}}', 
-    path:'{{path}}', 
-    description: {{feature_description}}, 
+    name:'{{feature_name}}',
+    path:'{{path}}',
+    description: {{feature_description}},
     tags:{{feature_tags}},),
   ''';
   static const String onAfterScenarioRun = '''
   onAfter: () async => onAfterRunFeature(
-    name:'{{feature_name}}', 
-    path:'{{path}}', 
-    description: {{feature_description}}, 
+    name:'{{feature_name}}',
+    path:'{{path}}',
+    description: {{feature_description}},
     tags:{{feature_tags}},),
   ''';
 
